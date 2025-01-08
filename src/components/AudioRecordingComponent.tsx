@@ -238,8 +238,8 @@ const AudioRecorder: (props: Props) => ReactElement = ({
           classes?.AudioRecorderDiscardClass ?? ""
         }`}
         onClick={() => stopAudioRecorder(false)}
-        aria-label="Discard Recording"
-        title="Discard Recording"
+        aria-label={discardLabel}
+        title={discardLabel}
         data-testid="ar_cancel"
       >
         <img src={discardSVG} width={16} height={16} alt={discardLabel} />

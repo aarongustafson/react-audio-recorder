@@ -1,6 +1,6 @@
 (function(){"use strict";(r=>{try{if(typeof window>"u")return;var e=document.createElement("style");e.appendChild(document.createTextNode(r)),document.head.appendChild(e)}catch(i){console.error("vite-plugin-css-injected-by-js",i)}})(".audio-recorder{background-color:#ebebeb;box-shadow:0 2px 5px #bebebe;border-radius:20px;box-sizing:border-box;color:#000;width:40px;display:flex;align-items:center;transition:all .2s ease-in;-webkit-tap-highlight-color:transparent}.audio-recorder button{box-sizing:content-box;background:transparent;border:none;color:#000;cursor:pointer;margin:0;padding:12px}.audio-recorder img{aspect-ratio:1/1;display:block}.audio-recorder .audio-recorder-mic{border-radius:50%}.audio-recorder.recording .audio-recorder-mic{border-radius:0}.audio-recorder-timer,.audio-recorder-status{color:#000;margin-left:10px;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;font-size:14px;font-weight:400;line-height:1}.audio-recorder-status{margin-left:15px;display:flex;align-items:baseline;flex-grow:1;animation-name:fading-ar-status;animation-duration:2s;animation-iteration-count:infinite}.audio-recorder-status-dot{background-color:#d00;border-radius:50%;height:10px;width:9px;margin-right:5px}.recording{border-radius:12px;padding-inline:10px;width:320px;width:min-content;transition:all .2s ease-out}.audio-recorder [hidden]{display:none}.audio-recorder-visualizer{margin-left:15px;flex-grow:1;align-self:center;display:flex;align-items:center}@keyframes fading-ar-status{0%{opacity:1}50%{opacity:0}to{opacity:1}}")})();
-import je, { useState as B, useCallback as $, useEffect as cr, Suspense as lr } from "react";
-var me = { exports: {} }, X = {};
+import je, { useState as B, useCallback as X, useEffect as cr, Suspense as lr } from "react";
+var me = { exports: {} }, K = {};
 /**
  * @license React
  * react-jsx-runtime.production.min.js
@@ -13,22 +13,22 @@ var me = { exports: {} }, X = {};
 var ke;
 function dr() {
   if (ke)
-    return X;
+    return K;
   ke = 1;
-  var R = je, p = Symbol.for("react.element"), k = Symbol.for("react.fragment"), E = Object.prototype.hasOwnProperty, D = R.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, N = { key: !0, ref: !0, __self: !0, __source: !0 };
-  function C(L, i, l) {
+  var R = je, p = Symbol.for("react.element"), k = Symbol.for("react.fragment"), E = Object.prototype.hasOwnProperty, L = R.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, N = { key: !0, ref: !0, __self: !0, __source: !0 };
+  function C(D, i, l) {
     var g, M = {}, m = null, c = null;
     l !== void 0 && (m = "" + l), i.key !== void 0 && (m = "" + i.key), i.ref !== void 0 && (c = i.ref);
     for (g in i)
       E.call(i, g) && !N.hasOwnProperty(g) && (M[g] = i[g]);
-    if (L && L.defaultProps)
-      for (g in i = L.defaultProps, i)
+    if (D && D.defaultProps)
+      for (g in i = D.defaultProps, i)
         M[g] === void 0 && (M[g] = i[g]);
-    return { $$typeof: p, type: L, key: m, ref: c, props: M, _owner: D.current };
+    return { $$typeof: p, type: D, key: m, ref: c, props: M, _owner: L.current };
   }
-  return X.Fragment = k, X.jsx = C, X.jsxs = C, X;
+  return K.Fragment = k, K.jsx = C, K.jsxs = C, K;
 }
-var K = {};
+var q = {};
 /**
  * @license React
  * react-jsx-runtime.development.js
@@ -41,7 +41,7 @@ var K = {};
 var _e;
 function fr() {
   return _e || (_e = 1, process.env.NODE_ENV !== "production" && function() {
-    var R = je, p = Symbol.for("react.element"), k = Symbol.for("react.portal"), E = Symbol.for("react.fragment"), D = Symbol.for("react.strict_mode"), N = Symbol.for("react.profiler"), C = Symbol.for("react.provider"), L = Symbol.for("react.context"), i = Symbol.for("react.forward_ref"), l = Symbol.for("react.suspense"), g = Symbol.for("react.suspense_list"), M = Symbol.for("react.memo"), m = Symbol.for("react.lazy"), c = Symbol.for("react.offscreen"), z = Symbol.iterator, _ = "@@iterator";
+    var R = je, p = Symbol.for("react.element"), k = Symbol.for("react.portal"), E = Symbol.for("react.fragment"), L = Symbol.for("react.strict_mode"), N = Symbol.for("react.profiler"), C = Symbol.for("react.provider"), D = Symbol.for("react.context"), i = Symbol.for("react.forward_ref"), l = Symbol.for("react.suspense"), g = Symbol.for("react.suspense_list"), M = Symbol.for("react.memo"), m = Symbol.for("react.lazy"), c = Symbol.for("react.offscreen"), z = Symbol.iterator, _ = "@@iterator";
     function P(e) {
       if (e === null || typeof e != "object")
         return null;
@@ -69,13 +69,13 @@ function fr() {
     var h = !1, O = !1, U = !1, W = !1, G = !1, Z;
     Z = Symbol.for("react.module.reference");
     function J(e) {
-      return !!(typeof e == "string" || typeof e == "function" || e === E || e === N || G || e === D || e === l || e === g || W || e === c || h || O || U || typeof e == "object" && e !== null && (e.$$typeof === m || e.$$typeof === M || e.$$typeof === C || e.$$typeof === L || e.$$typeof === i || // This needs to include all possible module reference object
+      return !!(typeof e == "string" || typeof e == "function" || e === E || e === N || G || e === L || e === l || e === g || W || e === c || h || O || U || typeof e == "object" && e !== null && (e.$$typeof === m || e.$$typeof === M || e.$$typeof === C || e.$$typeof === D || e.$$typeof === i || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
       e.$$typeof === Z || e.getModuleId !== void 0));
     }
-    function oe(e, r, t) {
+    function H(e, r, t) {
       var a = e.displayName;
       if (a)
         return a;
@@ -99,7 +99,7 @@ function fr() {
           return "Portal";
         case N:
           return "Profiler";
-        case D:
+        case L:
           return "StrictMode";
         case l:
           return "Suspense";
@@ -108,14 +108,14 @@ function fr() {
       }
       if (typeof e == "object")
         switch (e.$$typeof) {
-          case L:
+          case D:
             var r = e;
             return S(r) + ".Consumer";
           case C:
             var t = e;
             return S(t._context) + ".Provider";
           case i:
-            return oe(e, e.render, "ForwardRef");
+            return H(e, e.render, "ForwardRef");
           case M:
             var a = e.displayName || null;
             return a !== null ? a : j(e.type) || "Memo";
@@ -130,14 +130,14 @@ function fr() {
         }
       return null;
     }
-    var b = Object.assign, A = 0, I, q, se, ee, we, ye, be;
+    var b = Object.assign, A = 0, I, ee, se, re, we, ye, be;
     function Ce() {
     }
     Ce.__reactDisabledLog = !0;
     function Pe() {
       {
         if (A === 0) {
-          I = console.log, q = console.info, se = console.warn, ee = console.error, we = console.group, ye = console.groupCollapsed, be = console.groupEnd;
+          I = console.log, ee = console.info, se = console.warn, re = console.error, we = console.group, ye = console.groupCollapsed, be = console.groupEnd;
           var e = {
             configurable: !0,
             enumerable: !0,
@@ -170,13 +170,13 @@ function fr() {
               value: I
             }),
             info: b({}, e, {
-              value: q
+              value: ee
             }),
             warn: b({}, e, {
               value: se
             }),
             error: b({}, e, {
-              value: ee
+              value: re
             }),
             group: b({}, e, {
               value: we
@@ -193,7 +193,7 @@ function fr() {
       }
     }
     var ue = x.ReactCurrentDispatcher, ce;
-    function re(e, r, t) {
+    function te(e, r, t) {
       {
         if (ce === void 0)
           try {
@@ -206,16 +206,16 @@ function fr() {
 ` + ce + e;
       }
     }
-    var le = !1, te;
+    var le = !1, ae;
     {
       var We = typeof WeakMap == "function" ? WeakMap : Map;
-      te = new We();
+      ae = new We();
     }
     function pe(e, r) {
       if (!e || le)
         return "";
       {
-        var t = te.get(e);
+        var t = ae.get(e);
         if (t !== void 0)
           return t;
       }
@@ -270,7 +270,7 @@ function fr() {
                   if (d--, f--, f < 0 || n[d] !== w[f]) {
                     var T = `
 ` + n[d].replace(" at new ", " at ");
-                    return e.displayName && T.includes("<anonymous>") && (T = T.replace("<anonymous>", e.displayName)), typeof e == "function" && te.set(e, T), T;
+                    return e.displayName && T.includes("<anonymous>") && (T = T.replace("<anonymous>", e.displayName)), typeof e == "function" && ae.set(e, T), T;
                   }
                 while (d >= 1 && f >= 0);
               break;
@@ -279,8 +279,8 @@ function fr() {
       } finally {
         le = !1, ue.current = u, Ye(), Error.prepareStackTrace = s;
       }
-      var Q = e ? e.displayName || e.name : "", Ae = Q ? re(Q) : "";
-      return typeof e == "function" && te.set(e, Ae), Ae;
+      var Q = e ? e.displayName || e.name : "", Ae = Q ? te(Q) : "";
+      return typeof e == "function" && ae.set(e, Ae), Ae;
     }
     function Be(e, r, t) {
       return pe(e, !1);
@@ -289,46 +289,46 @@ function fr() {
       var r = e.prototype;
       return !!(r && r.isReactComponent);
     }
-    function ae(e, r, t) {
+    function ie(e, r, t) {
       if (e == null)
         return "";
       if (typeof e == "function")
         return pe(e, Ve(e));
       if (typeof e == "string")
-        return re(e);
+        return te(e);
       switch (e) {
         case l:
-          return re("Suspense");
+          return te("Suspense");
         case g:
-          return re("SuspenseList");
+          return te("SuspenseList");
       }
       if (typeof e == "object")
         switch (e.$$typeof) {
           case i:
             return Be(e.render);
           case M:
-            return ae(e.type, r, t);
+            return ie(e.type, r, t);
           case m: {
             var a = e, s = a._payload, u = a._init;
             try {
-              return ae(u(s), r, t);
+              return ie(u(s), r, t);
             } catch {
             }
           }
         }
       return "";
     }
-    var ie = Object.prototype.hasOwnProperty, Ne = {}, he = x.ReactDebugCurrentFrame;
-    function ne(e) {
+    var ne = Object.prototype.hasOwnProperty, Ne = {}, he = x.ReactDebugCurrentFrame;
+    function oe(e) {
       if (e) {
-        var r = e._owner, t = ae(e.type, e._source, r ? r.type : null);
+        var r = e._owner, t = ie(e.type, e._source, r ? r.type : null);
         he.setExtraStackFrame(t);
       } else
         he.setExtraStackFrame(null);
     }
     function Ze(e, r, t, a, s) {
       {
-        var u = Function.call.bind(ie);
+        var u = Function.call.bind(ne);
         for (var o in e)
           if (u(e, o)) {
             var n = void 0;
@@ -341,7 +341,7 @@ function fr() {
             } catch (d) {
               n = d;
             }
-            n && !(n instanceof Error) && (ne(s), v("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", a || "React class", t, o, typeof n), ne(null)), n instanceof Error && !(n.message in Ne) && (Ne[n.message] = !0, ne(s), v("Failed %s type: %s", t, n.message), ne(null));
+            n && !(n instanceof Error) && (oe(s), v("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", a || "React class", t, o, typeof n), oe(null)), n instanceof Error && !(n.message in Ne) && (Ne[n.message] = !0, oe(s), v("Failed %s type: %s", t, n.message), oe(null));
           }
       }
     }
@@ -369,15 +369,15 @@ function fr() {
       if (Ue(e))
         return v("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", Qe(e)), Ie(e);
     }
-    var H = x.ReactCurrentOwner, Ge = {
+    var $ = x.ReactCurrentOwner, Ge = {
       key: !0,
       ref: !0,
       __self: !0,
       __source: !0
-    }, De, Le, fe;
+    }, Le, De, fe;
     fe = {};
     function Je(e) {
-      if (ie.call(e, "ref")) {
+      if (ne.call(e, "ref")) {
         var r = Object.getOwnPropertyDescriptor(e, "ref").get;
         if (r && r.isReactWarning)
           return !1;
@@ -385,7 +385,7 @@ function fr() {
       return e.ref !== void 0;
     }
     function He(e) {
-      if (ie.call(e, "key")) {
+      if (ne.call(e, "key")) {
         var r = Object.getOwnPropertyDescriptor(e, "key").get;
         if (r && r.isReactWarning)
           return !1;
@@ -393,15 +393,15 @@ function fr() {
       return e.key !== void 0;
     }
     function $e(e, r) {
-      if (typeof e.ref == "string" && H.current && r && H.current.stateNode !== r) {
-        var t = j(H.current.type);
-        fe[t] || (v('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', j(H.current.type), e.ref), fe[t] = !0);
+      if (typeof e.ref == "string" && $.current && r && $.current.stateNode !== r) {
+        var t = j($.current.type);
+        fe[t] || (v('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', j($.current.type), e.ref), fe[t] = !0);
       }
     }
     function Xe(e, r) {
       {
         var t = function() {
-          De || (De = !0, v("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", r));
+          Le || (Le = !0, v("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", r));
         };
         t.isReactWarning = !0, Object.defineProperty(e, "key", {
           get: t,
@@ -412,7 +412,7 @@ function fr() {
     function Ke(e, r) {
       {
         var t = function() {
-          Le || (Le = !0, v("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", r));
+          De || (De = !0, v("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", r));
         };
         t.isReactWarning = !0, Object.defineProperty(e, "ref", {
           get: t,
@@ -454,7 +454,7 @@ function fr() {
         var u, o = {}, n = null, w = null;
         t !== void 0 && (Te(t), n = "" + t), He(r) && (Te(r.key), n = "" + r.key), Je(r) && (w = r.ref, $e(r, s));
         for (u in r)
-          ie.call(r, u) && !Ge.hasOwnProperty(u) && (o[u] = r[u]);
+          ne.call(r, u) && !Ge.hasOwnProperty(u) && (o[u] = r[u]);
         if (e && e.defaultProps) {
           var d = e.defaultProps;
           for (u in d)
@@ -464,13 +464,13 @@ function fr() {
           var f = typeof e == "function" ? e.displayName || e.name || "Unknown" : e;
           n && Xe(o, f), w && Ke(o, f);
         }
-        return qe(e, n, w, s, a, H.current, o);
+        return qe(e, n, w, s, a, $.current, o);
       }
     }
     var ge = x.ReactCurrentOwner, Se = x.ReactDebugCurrentFrame;
     function F(e) {
       if (e) {
-        var r = e._owner, t = ae(e.type, e._source, r ? r.type : null);
+        var r = e._owner, t = ie(e.type, e._source, r ? r.type : null);
         Se.setExtraStackFrame(t);
       } else
         Se.setExtraStackFrame(null);
@@ -622,22 +622,22 @@ Check the top-level render call using <` + t + ">.");
       return Oe(e, r, t, !1);
     }
     var sr = or, ur = nr;
-    K.Fragment = E, K.jsx = sr, K.jsxs = ur;
-  }()), K;
+    q.Fragment = E, q.jsx = sr, q.jsxs = ur;
+  }()), q;
 }
 process.env.NODE_ENV === "production" ? me.exports = dr() : me.exports = fr();
 var y = me.exports;
 const gr = (R, p, k) => {
-  const [E, D] = B(!1), [N, C] = B(!1), [L, i] = B(0), [l, g] = B(), [M, m] = B(), [c, z] = B(), _ = $(() => {
+  const [E, L] = B(!1), [N, C] = B(!1), [D, i] = B(0), [l, g] = B(), [M, m] = B(), [c, z] = B(), _ = X(() => {
     const h = setInterval(() => {
       i((O) => O + 1);
     }, 1e3);
     m(h);
-  }, [i, m]), P = $(() => {
+  }, [i, m]), P = X(() => {
     M != null && clearInterval(M), m(void 0);
-  }, [M, m]), x = $(() => {
+  }, [M, m]), x = X(() => {
     M == null && navigator.mediaDevices.getUserMedia({ audio: R ?? !0 }).then((h) => {
-      D(!0);
+      L(!0);
       const O = new MediaRecorder(
         h,
         k
@@ -650,21 +650,21 @@ const gr = (R, p, k) => {
     });
   }, [
     M,
-    D,
+    L,
     g,
     _,
     z,
     p,
     k
-  ]), v = $(() => {
-    l == null || l.stop(), P(), i(0), D(!1), C(!1);
+  ]), v = X(() => {
+    l == null || l.stop(), P(), i(0), L(!1), C(!1);
   }, [
     l,
     i,
-    D,
+    L,
     C,
     P
-  ]), V = $(() => {
+  ]), V = X(() => {
     N ? (C(!1), l == null || l.resume(), _()) : (C(!0), P(), l == null || l.pause());
   }, [l, C, _, P]);
   return {
@@ -674,7 +674,7 @@ const gr = (R, p, k) => {
     recordingBlob: c,
     isRecording: E,
     isPaused: N,
-    recordingTime: L,
+    recordingTime: D,
     mediaRecorder: l
   };
 }, vr = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDQ3MCA0NzAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3MCA0NzA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KCTxnPgoJCTxwYXRoIGQ9Ik0yMzUsMzAyLjI5NmM0Ny4xNzcsMCw4NS40MjMtMzguMjQ1LDg1LjQyMy04NS40MjNWODUuNDIzQzMyMC40MjMsMzguMjQ1LDI4Mi4xNzcsMCwyMzUsMHMtODUuNDIzLDM4LjI0NS04NS40MjMsODUuNDIzCgkJCXYxMzEuNDUxQzE0OS41NzcsMjY0LjA1MSwxODcuODIzLDMwMi4yOTYsMjM1LDMwMi4yOTZ6Ii8+CgkJPHBhdGggZD0iTTM1MC40MjMsMTM2LjE0OHYzMGgxNXY1MC43MjZjMCw3MS45MTUtNTguNTA4LDEzMC40MjMtMTMwLjQyMywxMzAuNDIzcy0xMzAuNDIzLTU4LjUwNy0xMzAuNDIzLTEzMC40MjN2LTUwLjcyNmgxNXYtMzAKCQkJaC00NXY4MC43MjZDNzQuNTc3LDMwMC4yNzMsMTM4LjU1MSwzNjksMjIwLDM3Ni41ODlWNDQwaC05MC40NDR2MzBoMjEwLjg4OXYtMzBIMjUwdi02My40MTEKCQkJYzgxLjQ0OS03LjU4OSwxNDUuNDIzLTc2LjMxNywxNDUuNDIzLTE1OS43MTZ2LTgwLjcyNkgzNTAuNDIzeiIvPgoJPC9nPgo8L3N2Zz4K", Mr = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgNDcuNjA3IDQ3LjYwNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDcuNjA3IDQ3LjYwNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgoJPGc+CgkJPHBhdGggZD0iTTE3Ljk5MSw0MC45NzZjMCwzLjY2Mi0yLjk2OSw2LjYzMS02LjYzMSw2LjYzMWwwLDBjLTMuNjYyLDAtNi42MzEtMi45NjktNi42MzEtNi42MzFWNi42MzFDNC43MjksMi45NjksNy42OTgsMCwxMS4zNiwwCgkJCWwwLDBjMy42NjIsMCw2LjYzMSwyLjk2OSw2LjYzMSw2LjYzMVY0MC45NzZ6Ii8+CgkJPHBhdGggZD0iTTQyLjg3Nyw0MC45NzZjMCwzLjY2Mi0yLjk2OSw2LjYzMS02LjYzMSw2LjYzMWwwLDBjLTMuNjYyLDAtNi42MzEtMi45NjktNi42MzEtNi42MzFWNi42MzEKCQkJQzI5LjYxNiwyLjk2OSwzMi41ODUsMCwzNi4yNDYsMGwwLDBjMy42NjIsMCw2LjYzMSwyLjk2OSw2LjYzMSw2LjYzMVY0MC45NzZ6Ii8+Cgk8L2c+Cjwvc3ZnPgo=", mr = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDQ5NC4xNDggNDk0LjE0OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDk0LjE0OCA0OTQuMTQ4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+Cgk8Zz4KCQk8Zz4KCQkJPHBhdGggZD0iTTQwNS4yODQsMjAxLjE4OEwxMzAuODA0LDEzLjI4QzExOC4xMjgsNC41OTYsMTA1LjM1NiwwLDk0Ljc0LDBDNzQuMjE2LDAsNjEuNTIsMTYuNDcyLDYxLjUyLDQ0LjA0NHY0MDYuMTI0CgkJCQljMCwyNy41NCwxMi42OCw0My45OCwzMy4xNTYsNDMuOThjMTAuNjMyLDAsMjMuMi00LjYsMzUuOTA0LTEzLjMwOGwyNzQuNjA4LTE4Ny45MDRjMTcuNjYtMTIuMTA0LDI3LjQ0LTI4LjM5MiwyNy40NC00NS44ODQKCQkJCUM0MzIuNjMyLDIyOS41NzIsNDIyLjk2NCwyMTMuMjg4LDQwNS4yODQsMjAxLjE4OHoiLz4KCQk8L2c+Cgk8L2c+Cjwvc3ZnPgo=", jr = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgNDYuNzM0IDQ2LjczNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDYuNzM0IDQ2LjczNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGQ9Ik00MS4zNDYsMEg1LjM4OEMyLjQxNywwLDAsMi40MTcsMCw1LjM4OHYzNS45NThjMCwyLjk3MSwyLjQxNyw1LjM4OCw1LjM4OCw1LjM4OGgzNS45NThjMi45NzEsMCw1LjM4OC0yLjQxNyw1LjM4OC01LjM4OAoJCVY1LjM4OEM0Ni43MzMsMi40MTcsNDQuMzE2LDAsNDEuMzQ2LDB6Ii8+CjwvZz4KPC9zdmc+Cg==", wr = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij4KICA8cGF0aCBkPSJNODggMzJoODBhOCA4IDAgMCAwIDAtMTZIODhhOCA4IDAgMCAwIDAgMTZabTEyOCAxNkg0MGE4IDggMCAwIDAgMCAxNmg4djE0NGExNi4wMiAxNi4wMiAwIDAgMCAxNiAxNmgxMjhhMTYuMDIgMTYuMDIgMCAwIDAgMTYtMTZWNjRoOGE4IDggMCAwIDAgMC0xNloiLz4KPC9zdmc+Cg==";
@@ -686,10 +686,10 @@ const yr = je.lazy(async () => {
   onNotAllowedOrFound: p,
   recorderControls: k,
   audioTrackConstraints: E,
-  downloadOnSavePress: D = !1,
+  downloadOnSavePress: L = !1,
   downloadFileExtension: N = "webm",
   showVisualizer: C = !1,
-  mediaRecorderOptions: L,
+  mediaRecorderOptions: D,
   classes: i
 }) => {
   const {
@@ -705,7 +705,7 @@ const yr = je.lazy(async () => {
   gr(
     E,
     p,
-    L
+    D
   ), [x, v] = B(!1), V = (S = !0) => {
     v(S), g();
   }, h = (S) => {
@@ -713,7 +713,7 @@ const yr = je.lazy(async () => {
     const j = S.target;
     j == null || j.focus();
   }, O = async (S) => {
-    const b = (await import("./index-1c988149.js").then((ee) => ee.i)).createFFmpeg({ log: !1 });
+    const b = (await import("./index-1c988149.js").then((re) => re.i)).createFFmpeg({ log: !1 });
     await b.load();
     const A = "input.webm", I = `output.${N}`;
     b.FS(
@@ -721,8 +721,8 @@ const yr = je.lazy(async () => {
       A,
       new Uint8Array(await S.arrayBuffer())
     ), await b.run("-i", A, I);
-    const q = b.FS("readFile", I);
-    return new Blob([q.buffer], {
+    const ee = b.FS("readFile", I);
+    return new Blob([ee.buffer], {
       type: `audio/${N}`
     });
   }, U = async (S) => {
@@ -733,9 +733,9 @@ const yr = je.lazy(async () => {
     I.style.display = "none", I.href = A, I.download = `audio.${b}`, document.body.appendChild(I), I.click(), I.remove();
   };
   cr(() => {
-    (x || k) && m != null && R != null && (R(m), D && U(m));
+    (x || k) && m != null && R != null && (R(m), L && U(m));
   }, [m]);
-  const W = "Start recording", G = "Pause recording", Z = "Stop recording", J = "Resume recording", oe = "Discard Recording";
+  const W = "Start recording", G = "Pause recording", Z = "Stop recording", J = "Resume recording", H = "Discard Recording";
   return /* @__PURE__ */ y.jsxs(
     "div",
     {
@@ -840,10 +840,10 @@ const yr = je.lazy(async () => {
             tabIndex: c ? 0 : -1,
             className: `audio-recorder-options ${(i == null ? void 0 : i.AudioRecorderDiscardClass) ?? ""}`,
             onClick: () => V(!1),
-            "aria-label": "Discard Recording",
-            title: "Discard Recording",
+            "aria-label": H,
+            title: H,
             "data-testid": "ar_cancel",
-            children: /* @__PURE__ */ y.jsx("img", { src: wr, width: 16, height: 16, alt: oe })
+            children: /* @__PURE__ */ y.jsx("img", { src: wr, width: 16, height: 16, alt: H })
           }
         )
       ]
