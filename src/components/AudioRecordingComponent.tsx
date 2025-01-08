@@ -5,7 +5,7 @@ import useAudioRecorder from "../hooks/useAudioRecorder";
 import micSVG from "../icons/mic.svg";
 import pauseSVG from "../icons/pause.svg";
 import resumeSVG from "../icons/play.svg";
-import saveSVG from "../icons/save.svg";
+import stopSVG from "../icons/stop.svg";
 import discardSVG from "../icons/trash.svg";
 import "../styles/audio-recorder.css";
 
@@ -135,6 +135,12 @@ const AudioRecorder: (props: Props) => ReactElement = ({
     }
   }, [recordingBlob]);
 
+  const startLabel = "Start recording";
+  const pauseLabel = "Pause recording";
+  const stopLabel = "Stop recording";
+  const resumeLabel = "Resume recording";
+  const discardLabel = "Discard Recording";
+
   return (
     <div
       className={`audio-recorder ${isRecording ? "recording" : ""} ${
@@ -147,13 +153,13 @@ const AudioRecorder: (props: Props) => ReactElement = ({
           classes?.AudioRecorderStartSaveClass ?? ""
         }`}
         data-testid="ar_mic"
-        aria-label={isRecording ? "Save recording" : "Start recording"}
-        title={isRecording ? "Save recording" : "Start recording"}
+        aria-label={isRecording ? stopLabel : startLabel}
+        title={isRecording ? stopLabel : startLabel}
         onClick={isRecording ? () => stopAudioRecorder() : startAudioRecorder}
       >
         <img
-          src={isRecording ? saveSVG : micSVG}
-          alt={isRecording ? "Save recording" : "Start recording"}
+          src={isRecording ? stopSVG : micSVG}
+          alt={isRecording ? stopLabel : startLabel}
           width={16}
           height={16}
         />
@@ -213,13 +219,13 @@ const AudioRecorder: (props: Props) => ReactElement = ({
           classes?.AudioRecorderPauseResumeClass ?? ""
         }`}
         onClick={togglePauseResume}
-        aria-label={isPaused ? "Resume recording" : "Pause recording"}
-        title={isPaused ? "Resume recording" : "Pause recording"}
+        aria-label={isPaused ? resumeLabel : pauseLabel}
+        title={isPaused ? resumeLabel : pauseLabel}
         data-testid={"ar_pause"}
       >
         <img
           src={isPaused ? resumeSVG : pauseSVG}
-          alt={isPaused ? "Resume recording" : "Pause recording"}
+          alt={isPaused ? resumeLabel : pauseLabel}
           width={16}
           height={16}
         />
@@ -236,7 +242,7 @@ const AudioRecorder: (props: Props) => ReactElement = ({
         title="Discard Recording"
         data-testid="ar_cancel"
       >
-        <img src={discardSVG} width={16} height={16} alt="Discard Recording" />
+        <img src={discardSVG} width={16} height={16} alt={discardLabel} />
       </button>
     </div>
   );
