@@ -38,6 +38,7 @@ const AudioRecorder: (props: Props) => ReactElement = ({
   showVisualizer = false,
   mediaRecorderOptions,
   classes,
+  disabled,
 }: Props) => {
   const {
     startRecording,
@@ -156,6 +157,7 @@ const AudioRecorder: (props: Props) => ReactElement = ({
         aria-label={isRecording ? stopLabel : startLabel}
         title={isRecording ? stopLabel : startLabel}
         onClick={isRecording ? () => stopAudioRecorder() : startAudioRecorder}
+        disabled={disabled}
       >
         <img
           src={isRecording ? stopSVG : micSVG}

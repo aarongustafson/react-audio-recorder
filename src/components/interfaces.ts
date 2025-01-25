@@ -81,4 +81,8 @@ export interface Props {
    * Custom classes to changes styles.
    **/
   classes?: StyleProps;
+  /**
+   * Disable the audio recorder
+   **/
+  disabled?: boolean;
 }
