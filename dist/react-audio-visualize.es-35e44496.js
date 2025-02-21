@@ -9,11 +9,11 @@ var ie = { exports: {} }, A = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var xe;
+var $e;
 function dr() {
-  if (xe)
+  if ($e)
     return A;
-  xe = 1;
+  $e = 1;
   var p = Pe, y = Symbol.for("react.element"), O = Symbol.for("react.fragment"), b = Object.prototype.hasOwnProperty, g = p.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, _ = { key: !0, ref: !0, __self: !0, __source: !0 };
   function S(i, s, d) {
     var a, o = {}, h = null, j = null;
@@ -40,11 +40,11 @@ var G = {};
 var Ne;
 function vr() {
   return Ne || (Ne = 1, process.env.NODE_ENV !== "production" && function() {
-    var p = Pe, y = Symbol.for("react.element"), O = Symbol.for("react.portal"), b = Symbol.for("react.fragment"), g = Symbol.for("react.strict_mode"), _ = Symbol.for("react.profiler"), S = Symbol.for("react.provider"), i = Symbol.for("react.context"), s = Symbol.for("react.forward_ref"), d = Symbol.for("react.suspense"), a = Symbol.for("react.suspense_list"), o = Symbol.for("react.memo"), h = Symbol.for("react.lazy"), j = Symbol.for("react.offscreen"), $ = Symbol.iterator, R = "@@iterator";
+    var p = Pe, y = Symbol.for("react.element"), O = Symbol.for("react.portal"), b = Symbol.for("react.fragment"), g = Symbol.for("react.strict_mode"), _ = Symbol.for("react.profiler"), S = Symbol.for("react.provider"), i = Symbol.for("react.context"), s = Symbol.for("react.forward_ref"), d = Symbol.for("react.suspense"), a = Symbol.for("react.suspense_list"), o = Symbol.for("react.memo"), h = Symbol.for("react.lazy"), j = Symbol.for("react.offscreen"), x = Symbol.iterator, R = "@@iterator";
     function P(e) {
       if (e === null || typeof e != "object")
         return null;
-      var r = $ && e[$] || e[R];
+      var r = x && e[x] || e[R];
       return typeof r == "function" ? r : null;
     }
     var m = p.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
@@ -192,7 +192,7 @@ function vr() {
       }
     }
     var K = m.ReactCurrentDispatcher, Q;
-    function q(e, r, t) {
+    function Y(e, r, t) {
       {
         if (Q === void 0)
           try {
@@ -205,16 +205,16 @@ function vr() {
 ` + Q + e;
       }
     }
-    var Z = !1, Y;
+    var Z = !1, q;
     {
       var Ae = typeof WeakMap == "function" ? WeakMap : Map;
-      Y = new Ae();
+      q = new Ae();
     }
     function ge(e, r) {
       if (!e || Z)
         return "";
       {
-        var t = Y.get(e);
+        var t = q.get(e);
         if (t !== void 0)
           return t;
       }
@@ -267,9 +267,9 @@ function vr() {
               if (w !== 1 || k !== 1)
                 do
                   if (w--, k--, k < 0 || c[w] !== C[k]) {
-                    var x = `
+                    var $ = `
 ` + c[w].replace(" at new ", " at ");
-                    return e.displayName && x.includes("<anonymous>") && (x = x.replace("<anonymous>", e.displayName)), typeof e == "function" && Y.set(e, x), x;
+                    return e.displayName && $.includes("<anonymous>") && ($ = $.replace("<anonymous>", e.displayName)), typeof e == "function" && q.set(e, $), $;
                   }
                 while (w >= 1 && k >= 0);
               break;
@@ -278,8 +278,8 @@ function vr() {
       } finally {
         Z = !1, K.current = v, Me(), Error.prepareStackTrace = f;
       }
-      var W = e ? e.displayName || e.name : "", $e = W ? q(W) : "";
-      return typeof e == "function" && Y.set(e, $e), $e;
+      var W = e ? e.displayName || e.name : "", xe = W ? Y(W) : "";
+      return typeof e == "function" && q.set(e, xe), xe;
     }
     function Be(e, r, t) {
       return ge(e, !1);
@@ -294,12 +294,12 @@ function vr() {
       if (typeof e == "function")
         return ge(e, Ve(e));
       if (typeof e == "string")
-        return q(e);
+        return Y(e);
       switch (e) {
         case d:
-          return q("Suspense");
+          return Y("Suspense");
         case a:
-          return q("SuspenseList");
+          return Y("SuspenseList");
       }
       if (typeof e == "object")
         switch (e.$$typeof) {
@@ -325,7 +325,7 @@ function vr() {
       } else
         be.setExtraStackFrame(null);
     }
-    function qe(e, r, t, n, f) {
+    function Ye(e, r, t, n, f) {
       {
         var v = Function.call.bind(J);
         for (var u in e)
@@ -344,9 +344,9 @@ function vr() {
           }
       }
     }
-    var Ye = Array.isArray;
+    var qe = Array.isArray;
     function ee(e) {
-      return Ye(e);
+      return qe(e);
     }
     function He(e) {
       {
@@ -563,7 +563,7 @@ Check the top-level render call using <` + t + ">.");
           return;
         if (t) {
           var n = F(r);
-          qe(t, e.props, "prop", n, e);
+          Ye(t, e.props, "prop", n, e);
         } else if (r.PropTypes !== void 0 && !ne) {
           ne = !0;
           var f = F(r);
@@ -599,17 +599,17 @@ Check the top-level render call using <` + t + ">.");
         if (k == null)
           return k;
         if (u) {
-          var x = r.children;
-          if (x !== void 0)
+          var $ = r.children;
+          if ($ !== void 0)
             if (n)
-              if (ee(x)) {
-                for (var W = 0; W < x.length; W++)
-                  Ce(x[W], e);
-                Object.freeze && Object.freeze(x);
+              if (ee($)) {
+                for (var W = 0; W < $.length; W++)
+                  Ce($[W], e);
+                Object.freeze && Object.freeze($);
               } else
                 l("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");
             else
-              Ce(x, e);
+              Ce($, e);
         }
         return e === b ? ir(k) : ar(k), k;
       }
@@ -657,14 +657,14 @@ const mr = (p, y, O, b) => {
   minDecibels: d = -90,
   smoothingTimeConstant: a = 0.4
 }) => {
-  const [o, h] = B(), [j, $] = B(), [R, P] = B(), m = Fe(null);
+  const [o, h] = B(), [j, x] = B(), [R, P] = B(), m = Fe(null);
   V(() => {
     if (!p.stream)
       return;
     const D = new AudioContext(), N = D.createAnalyser();
     P(N), N.fftSize = i, N.minDecibels = d, N.maxDecibels = s, N.smoothingTimeConstant = a;
     const z = D.createMediaStreamSource(p.stream);
-    return z.connect(N), h(D), $(z), () => {
+    return z.connect(N), h(D), x(z), () => {
       z.disconnect(), N.disconnect(), D.state !== "closed" && D.close();
     };
   }, [p.stream]), V(() => {
@@ -714,13 +714,13 @@ const mr = (p, y, O, b) => {
   for (let o = 0; o < S; o++) {
     const h = [];
     let j = 0;
-    const $ = [];
+    const x = [];
     let R = 0;
     for (let l = 0; l < i && o * i + l < p.length; l++) {
       const E = _[o * i + l];
-      E <= 0 && (h.push(E), j++), E > 0 && ($.push(E), R++);
+      E <= 0 && (h.push(E), j++), E > 0 && (x.push(E), R++);
     }
-    const P = h.reduce((l, E) => l + E, 0) / j, m = { max: $.reduce((l, E) => l + E, 0) / R, min: P };
+    const P = h.reduce((l, E) => l + E, 0) / j, m = { max: x.reduce((l, E) => l + E, 0) / R, min: P };
     m.max > a && (a = m.max), Math.abs(m.min) > a && (a = Math.abs(m.min)), d.push(m);
   }
   if (s * 0.8 > a * s) {
@@ -738,7 +738,7 @@ const mr = (p, y, O, b) => {
   a.clearRect(0, 0, y.width, y.height), g !== "transparent" && (a.fillStyle = g, a.fillRect(0, 0, y.width, y.height));
   const o = (i || 0) / s;
   p.forEach((h, j) => {
-    const $ = j / p.length, R = o > $;
+    const x = j / p.length, R = o > x;
     a.fillStyle = R && S ? S : _;
     const P = j * (O + b), m = d + h.min, l = O, E = d + h.max - m;
     a.beginPath(), a.roundRect ? (a.roundRect(P, m, l, E, 50), a.fill()) : a.fillRect(P, m, l, E);
@@ -756,7 +756,7 @@ const mr = (p, y, O, b) => {
     barColor: s = "rgb(184, 184, 184)",
     barPlayedColor: d = "rgb(160, 198, 255)"
   }, a) => {
-    const o = Fe(null), [h, j] = B([]), [$, R] = B(0);
+    const o = Fe(null), [h, j] = B([]), [x, R] = B(0);
     return yr(
       a,
       () => o.current,
@@ -814,9 +814,9 @@ const mr = (p, y, O, b) => {
         s,
         d,
         _,
-        $
+        x
       );
-    }, [_, $]), /* @__PURE__ */ Ie.jsx(
+    }, [_, x]), /* @__PURE__ */ Ie.jsx(
       "canvas",
       {
         ref: o,

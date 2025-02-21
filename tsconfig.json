@@ -16,6 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "tests/AudioRecordingComponent.test.tsx"],
+  "include": ["src", "vite.config.ts", "tests/AudioRecordingComponent.test.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
